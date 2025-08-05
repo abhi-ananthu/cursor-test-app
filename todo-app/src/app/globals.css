@@ -1,0 +1,33 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    font-family: system-ui, sans-serif;
+  }
+  
+  body {
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+}
+
+@layer components {
+  .todo-checkbox {
+    @apply flex-shrink-0 w-6 h-6 rounded-full border-2 flex items-center justify-center transition-colors duration-200;
+  }
+  
+  .todo-checkbox-checked {
+    @apply bg-green-500 border-green-500 text-white;
+  }
+  
+  .todo-checkbox-unchecked {
+    @apply border-gray-300 hover:border-green-400;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
